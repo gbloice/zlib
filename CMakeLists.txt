@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 2.4.4)
 set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)
 
+# Set the old policy for version numbers in the project command
+if (POLICY CMP0048)
+	cmake_policy(SET CMP0048 OLD)
+endif()
+
 project(zlib C)
 
 set(VERSION "1.2.8")
